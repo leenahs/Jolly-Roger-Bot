@@ -14,7 +14,7 @@ public class MainBot {
         api.addListener(new FunCommands());
 
         api.addServerMemberJoinListener(event -> {
-            Optional<TextChannel> channel = api.getTextChannelById("686063822510882842");
+            Optional<TextChannel> channel = api.getTextChannelById(Constants.nameChannelId);
             if (channel.isPresent()){
                 channel.get().sendMessage("Welcome to the server, " + event.getUser().getMentionTag() + "! Please enjoy your stay!");
             }else{
